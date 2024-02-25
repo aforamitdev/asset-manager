@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { AvatarFallback, AvatarImage, Avatar } from '@/shadcn/avatar';
 import { Nav } from '@/shadcn/nav';
 import {
   ResizableHandle,
@@ -52,11 +53,14 @@ const SideBar = ({
         >
           <div
             className={cn(
-              'flex h-[52px] items-center justify-center',
-              isCollapsed ? 'h-[52px]' : 'px-2'
+              'flex h-[52px] items-center',
+              isCollapsed ? 'h-[52px] justify-center' : 'px-2'
             )}
           >
-            account
+            <Avatar className='rounded-md '>
+              <AvatarImage src='' className=' bg-gray-900 '></AvatarImage>
+              <AvatarFallback className='bg-gray-500 '>AM</AvatarFallback>
+            </Avatar>
           </div>
           <Separator />
           <Nav
