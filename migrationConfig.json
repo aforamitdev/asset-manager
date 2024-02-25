@@ -1,0 +1,4 @@
+{
+  "migrationFiles": "./business/data/schema/sql",
+  "database": "app.db"
+}
