@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Greet } from '../wailsjs/go/main/App';
 import { Accordion } from '@radix-ui/react-accordion';
 import { AccordionContent } from './shadcn/accordion';
+import SideBar from './app/shared/sidebar/SideBar';
 
 function App() {
   const [resultText, setResultText] = useState(
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div id='App' className='bg-white h-screen w-full'>
-      asas
+      <SideBar />
     </div>
   );
 }
