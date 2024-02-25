@@ -8,7 +8,14 @@ import {
 } from '@/shadcn/resizable';
 import { Separator } from '@/shadcn/separator';
 import { TooltipProvider } from '@/shadcn/tooltip';
-import { Archive, ArchiveX, File, Inbox, Send, Trash2 } from 'lucide-react';
+import {
+  ActivityIcon,
+  Archive,
+  Building,
+  ReceiptIndianRupee,
+  Trash2,
+  Wallet,
+} from 'lucide-react';
 import React from 'react';
 
 type Props = {
@@ -67,27 +74,27 @@ const SideBar = ({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: 'Inbox',
+                title: 'Accounts',
                 label: '128',
-                icon: Inbox,
+                icon: Wallet,
                 variant: 'default',
               },
               {
-                title: 'Drafts',
+                title: 'Real State',
                 label: '9',
-                icon: File,
+                icon: Building,
                 variant: 'ghost',
               },
               {
-                title: 'Sent',
+                title: 'Stocks',
                 label: '',
-                icon: Send,
+                icon: ActivityIcon,
                 variant: 'ghost',
               },
               {
-                title: 'Junk',
+                title: 'Loan',
                 label: '23',
-                icon: ArchiveX,
+                icon: ReceiptIndianRupee,
                 variant: 'ghost',
               },
               {

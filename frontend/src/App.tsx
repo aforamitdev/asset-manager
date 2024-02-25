@@ -3,6 +3,7 @@ import { Greet } from '../wailsjs/go/main/App';
 import { Accordion } from '@radix-ui/react-accordion';
 import { AccordionContent } from './shadcn/accordion';
 import SideBar from './app/shared/sidebar/SideBar';
+import BankManager from './app/bankManager/BankManager';
 
 function App() {
   const [resultText, setResultText] = useState(
@@ -19,6 +20,7 @@ function App() {
   return (
     <div id='App' className='bg-white h-screen w-full'>
       <SideBar />
+      <BankManager />
     </div>
   );
 }

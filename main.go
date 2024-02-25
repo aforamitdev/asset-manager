@@ -1,7 +1,10 @@
 package main
 
 import (
+	"changeme/business/sqllite"
 	"embed"
+	"fmt"
+	"log"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -13,10 +16,29 @@ var assets embed.FS
 
 func main() {
 	// Create an instance of the app structure
+	db, err := sqllite.NewDatabase()
+	defer db.Close()
+
+	if err != nil {
+		fmt.Errorf(err.Error())
+		return
+	}
+	var id int
+	rows, err := db.Query("SELECT * FROM test")
+	fmt.Println(err, "s")
+	for rows.Next() {
+		rows.Scan(&id)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(id)
+
+	}
+
 	app := NewApp()
 
 	// Create application with options
-	err := wails.Run(&options.App{
+	err = wails.Run(&options.App{
 		Title:  "asset-manager",
 		Width:  1024,
 		Height: 768,
