@@ -5,6 +5,7 @@ go 1.21
 toolchain go1.21.6
 
 require (
+	github.com/gdamore/tcell/v2 v2.7.1
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/rivo/tview v0.0.0-20240225120200-5605142ca62e
 	github.com/spf13/cobra v1.8.0
@@ -16,7 +17,6 @@ require (
 	github.com/bep/debounce v1.2.1 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/gdamore/encoding v1.0.0 // indirect
-	github.com/gdamore/tcell/v2 v2.7.1 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/google/uuid v1.5.0 // indirect

@@ -15,6 +15,7 @@ import {
   ReceiptIndianRupee,
   Trash2,
   Wallet,
+  Command,
 } from 'lucide-react';
 import React from 'react';
 
@@ -73,6 +74,12 @@ const SideBar = ({
           <Nav
             isCollapsed={isCollapsed}
             links={[
+              {
+                title: 'Overview',
+                label: '',
+                icon: Command,
+                variant: 'default',
+              },
               {
                 title: 'Accounts',
                 label: '128',
