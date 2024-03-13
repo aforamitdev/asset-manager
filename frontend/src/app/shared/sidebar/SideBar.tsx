@@ -1,3 +1,4 @@
+import OverViewSwitch from '@/app/market/header/OverViewSwitch';
 import { cn } from '@/lib/utils';
 import { AvatarFallback, AvatarImage, Avatar } from '@/shadcn/avatar';
 import { Nav } from '@/shadcn/nav';
@@ -8,6 +9,7 @@ import {
 } from '@/shadcn/resizable';
 import { Separator } from '@/shadcn/separator';
 import { TooltipProvider } from '@/shadcn/tooltip';
+
 import {
   ActivityIcon,
   Archive,
@@ -61,8 +63,8 @@ const SideBar = ({
         >
           <div
             className={cn(
-              'flex h-[52px] items-center',
-              isCollapsed ? 'h-[52px] justify-center' : 'px-2'
+              'flex h-[51px] items-center',
+              isCollapsed ? 'h-[51px] justify-center' : 'px-2'
             )}
           >
             <Avatar className='rounded-md '>
@@ -121,7 +123,7 @@ const SideBar = ({
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={15}>
-          asas
+          <OverViewSwitch />
         </ResizablePanel>
         <ResizableHandle withHandle />
 

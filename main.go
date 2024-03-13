@@ -52,7 +52,16 @@ func main() {
 		},
 	})
 
-	if err != nil {
-		println("Error:", err.Error())
-	}
+	// response, err := http.Get("https://www.nseindia.com/api/marketStatus")
+
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+
+	// }
+	// responseData, err := io.ReadAll(response.Body)
+	// fmt.Println(string(responseData))
+
+	// if err != nil {
+	// 	println("Error:", err.Error())
+	// }
 }
