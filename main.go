@@ -2,10 +2,12 @@ package main
 
 import (
 	"changeme/business/sqllite"
+	"context"
 	"embed"
 	"fmt"
 	"log"
 
+	"github.com/anchore/go-logger"
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
@@ -15,8 +17,12 @@ import (
 var assets embed.FS
 
 func main() {
+	// var log *logger.Logger
 	// Create an instance of the app structure
+	var log *logger.Logger
+
 	db, err := sqllite.NewDatabase()
+
 	defer db.Close()
 
 	if err != nil {
@@ -52,6 +58,10 @@ func main() {
 		},
 	})
 
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	// response, err := http.Get("https://www.nseindia.com/api/marketStatus")
 
 	// if err != nil {
@@ -64,4 +74,10 @@ func main() {
 	// if err != nil {
 	// 	println("Error:", err.Error())
 	// }
+}
+
+func run(ctx context.Context, log *log.Logger) error {
+
+	log.in
+
 }
